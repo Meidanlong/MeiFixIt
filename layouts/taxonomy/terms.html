@@ -4,6 +4,7 @@
 
 {{- define "content" -}}
   {{- $taxonomies := .Data.Plural -}}
+  <!--按照文件名称顺序-->
   {{- $terms := .Data.Terms.Alphabetical -}}
   {{- $type := .Type -}}
 
@@ -35,7 +36,7 @@
         {{- end -}}
       </div>
 
-    {{- /* Categories Page */ -}}
+    {{- /* Taxonomies Page 兼容自定义标签 */ -}}
     {{- else -}}
       <div class="categories-card">
         {{- range $terms -}}
