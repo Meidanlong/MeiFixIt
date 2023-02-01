@@ -56,8 +56,16 @@
         {{- end -}}
 
         <!--文章添加自定义标签-->
-        {{- range .Params.series -}}
-          {{- $category := partialCached "function/path.html" . . | printf "/series/%v" | $.Site.GetPage -}}
+        {{- range .Params.shell -}}
+          {{- $category := partialCached "function/path.html" . . | printf "/shell/%v" | $.Site.GetPage -}}
+          {{- $categories = $categories | append (printf `<a href="%v">%v %v</a>` (partial "function/escapeurl.html" $category.RelPermalink) (dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html") $category.Title) -}}
+        {{- end -}}
+        {{- range .Params.git -}}
+          {{- $category := partialCached "function/path.html" . . | printf "/git/%v" | $.Site.GetPage -}}
+          {{- $categories = $categories | append (printf `<a href="%v">%v %v</a>` (partial "function/escapeurl.html" $category.RelPermalink) (dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html") $category.Title) -}}
+        {{- end -}}
+        {{- range .Params.docker -}}
+          {{- $category := partialCached "function/path.html" . . | printf "/docker/%v" | $.Site.GetPage -}}
           {{- $categories = $categories | append (printf `<a href="%v">%v %v</a>` (partial "function/escapeurl.html" $category.RelPermalink) (dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html") $category.Title) -}}
         {{- end -}}
 
