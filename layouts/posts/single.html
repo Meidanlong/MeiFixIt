@@ -55,7 +55,7 @@
           {{- $categories = $categories | append (printf `<a href="%v">%v %v</a>` (partial "function/escapeurl.html" $category.RelPermalink) (dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html") $category.Title) -}}
         {{- end -}}
 
-        <!--文章添加自定义标签-->
+        <!-- *****文章添加自定义标签***** -->
         {{- range .Params.shell -}}
           {{- $category := partialCached "function/path.html" . . | printf "/shell/%v" | $.Site.GetPage -}}
           {{- $categories = $categories | append (printf `<a href="%v">%v %v</a>` (partial "function/escapeurl.html" $category.RelPermalink) (dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html") $category.Title) -}}
