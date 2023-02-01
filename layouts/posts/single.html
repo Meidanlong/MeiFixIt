@@ -62,6 +62,8 @@
           {{- $categories = $categories | append (printf `<a href="%v">%v %v</a>` (partial "function/escapeurl.html" $category.RelPermalink) (dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html") $category.Title) -}}
         {{- end -}}
 
+
+
         {{- with delimit $categories "&ensp;" }}
           <span class="post-category">
             {{- dict "Categories" . | T "single.includedInCategories" | safeHTML -}}
