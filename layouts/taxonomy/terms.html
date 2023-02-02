@@ -36,6 +36,26 @@
         {{- end -}}
       </div>
 
+    {{- else if eq $taxonomies "noteTags" -}}
+      {{- $tagCloud := .Site.Params.tagcloud -}}
+      <div class="tag-cloud-tags{{ with $tagCloud.enable }} text-center{{ end }}">
+        {{- if $tagCloud.enable -}}
+          {{- $noteTags := cond (eq $tagCloud.orderby "name") $.Site.Taxonomies.noteTags.Alphabetical $.Site.Taxonomies.noteTags.ByCount -}}
+          {{- $baseGrade := div ($tagCloud.peakCount | default 10) 10.0 -}}
+          {{- $minFont := $tagCloud.min | default 16 -}}
+          {{- $baseFont := div (sub ($tagCloud.max | default 32) $minFont) 10.0 -}}
+          {{- range $noteTags -}}
+            {{- $grade := math.Min (math.Floor (div (sub .Count 1) $baseGrade)) 10 -}}
+            {{- $fontSize := add $minFont (mul $grade $baseFont) -}}
+            <a href='{{ partial "function/escapeurl.html" .Page.RelPermalink }}' class="tag-cloud-{{ $grade }}" style="--tag-font: {{ $fontSize }}px">{{ .Page.Title }} <sup>{{ .Count }}</sup></a>
+          {{- end -}}
+        {{- else -}}
+          {{- range $.Site.Taxonomies.noteTags.ByCount -}}
+            <a href='{{ partial "function/escapeurl.html" .Page.RelPermalink }}'>{{ .Page.Title }} <sup>{{ .Count }}</sup></a>
+          {{- end -}}
+        {{- end -}}
+      </div>
+
     {{- /* Taxonomies Page 兼容自定义标签 */ -}}
     {{- else -}}
       <div class="categories-card">
