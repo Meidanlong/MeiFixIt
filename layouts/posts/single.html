@@ -55,7 +55,7 @@
           {{ if ne $elem_key "author" "authoremail" "authorlink" "comment" "date" "description" "draft" "iscjklanguage" "keywords" "lastmod" "license" "title" "type" "weight" "publishdate" "summary" "hiddenfromhomepage" "hiddenfromsearch" "resources" "tags" "noteTags" "subtitle" }}
             {{ warnf "diy tags -> %v" $elem_key }}
             {{ range $cur_val := $elem_val }}
-              {{- $category := partialCached "function/path.html" . . | printf "/$cur_val/%v" | $.Site.GetPage -}}
+              {{- $category := partialCached "function/path.html" . . | printf "/$elem_key/%v" | $.Site.GetPage -}}
               {{- $categories = $categories | append (printf `<a href="%v">%v %v</a>` (partial "function/escapeurl.html" $category.RelPermalink) (dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html") $cur_val) -}}
             {{ end }}
           {{ end }}
