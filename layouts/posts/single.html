@@ -48,11 +48,15 @@
     <div class="post-meta">
       <div class="post-meta-line">
         {{- partial "single/post-author.html" . -}}
-
         {{- $categories := slice -}}
-        <!-- *****   兼容自定义标签   ***** -->
+
+        <!-- *****   兼容自定义标签  默认标签：https://fixit.lruihao.cn/zh-cn/theme-documentation-content/#front-matter  ***** -->
         {{ range $elem_key, $elem_val := .Params }}
-          {{ if ne $elem_key "author" "authoremail" "authorlink" "comment" "date" "description" "draft" "iscjklanguage" "keywords" "lastmod" "license" "title" "type" "weight" "publishdate" "summary" "hiddenfromhomepage" "hiddenfromsearch" "resources" "tags" "noteTags" "subtitle" }}
+          {{ if ne $elem_key "title" "subtitle" "date" "lastmod" "draft" "author" "authorlink" "authoremail" "description" "keywords" "license" "images" "tags"
+        "categories" "featuredimage" "featuredimagepreview" "hiddenfromhomepage" "hiddenfromsearch" "twemoji" "lightgallery" "ruby" "fraction" "fontawesome"
+        "linktomarkdown" "rssfulltext" "pagestyle" "gravatarforce" "toc" "expirationreminder" "code" "edit" "math" "mapbox" "share" "comment" "library" "seo"
+        "type" "menu" "password" "message" "repost" "autobookmark" "wordcount" "readingtime" "endflag" "reward" "instantpage"
+        "iscjklanguage" "weight" "publishdate" "summary" "resources" "noteTags" }}
             {{ warnf "diy tags -> %v" $elem_key }}
             {{ range $cur_val := $elem_val }}
               {{- $category := partialCached "function/path.html" . . | printf "/%v/%v" $elem_key | $.Site.GetPage -}}
