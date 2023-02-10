@@ -56,7 +56,7 @@
                             "categories" "featuredimage" "featuredimagepreview" "hiddenfromhomepage" "hiddenfromsearch" "twemoji" "lightgallery" "ruby" "fraction" "fontawesome"
                             "linktomarkdown" "rssfulltext" "pagestyle" "gravatarforce" "toc" "expirationreminder" "code" "edit" "math" "mapbox" "share" "comment" "library" "seo"
                             "type" "menu" "password" "message" "repost" "autobookmark" "wordcount" "readingtime" "endflag" "reward" "instantpage"
-                            "iscjklanguage" "weight" "publishdate" "summary" "resources" "noteTags" }}
+                            "iscjklanguage" "weight" "publishdate" "summary" "resources" "notetags" }}
             {{- /* warnf "diy tags -> %v" $elem_key */ -}}
             {{ range $cur_val := $elem_val }}
               {{- $category := partialCached "function/path.html" . . | printf "/%v/%v" $elem_key | $.Site.GetPage -}}
