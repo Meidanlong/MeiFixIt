@@ -76,6 +76,28 @@
         {{- end -}}
       </div>
 
+
+    {{- /* Taxonomies Page 兼容目录标签 */ -}}
+    {{- else if hasPrefix $taxonomies "dir-" -}}
+      <div class="categories-card">
+        {{- range $terms -}}
+          {{- $term := .Term -}}
+          {{- $pages := .Pages -}}
+          {{- with $.Site.GetPage "taxonomy" (printf "%v" $term) -}}
+            <div class="card-item">
+              <div class="card-item-wrapper">
+                <h3 class="card-item-title">
+                  <a href='{{ partial "function/escapeurl.html" .RelPermalink }}'>
+                    {{ dict "Class" "fa-regular fa-folder fa-fw" | partial "plugin/icon.html" }}
+                    {{ .Page.Title }}&nbsp;<sup>{{- len $pages -}}</sup>
+                  </a>
+                </h3>
+              </div>
+            </div>
+          {{- end -}}
+        {{- end -}}
+      </div>
+
     {{- /* Taxonomies Page 兼容自定义标签 */ -}}
     {{- else -}}
       <div class="categories-card">
