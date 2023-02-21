@@ -1,7 +1,7 @@
 # FixIt 主题 | Hugo
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.84.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.89.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](/LICENSE)
 
 👉 [English README](README.md) | 简体中文说明
@@ -14,23 +14,24 @@ FixIt 主题继承了这些主题的优秀功能，并在此基础上添加了�
 
 ![Hugo Theme FixIt](https://fixit.lruihao.cn/images/Apple-Devices-Preview.jpg)
 
-## [立即开始](https://fixit.lruihao.cn/zh-cn/categories/documentation/)
+## 快速上手
+
+使用以下模板之一：
+
+* [hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git)
+* [hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
+* [hugo-fixit/docs](https://github.com/hugo-fixit/docs "FixIt 主题官网")
+* [Lruihao/hugo-blog](https://github.com/Lruihao/hugo-blog "FixIt 主题作者的博客")
+
+## [完整文档](https://fixit.lruihao.cn/zh-cn/categories/documentation/)
 
 前往这篇 [文档](https://fixit.lruihao.cn/zh-cn/theme-documentation-basics/)，阅读关于安装与使用的详细指南。
 
-或者，在本地构建 [文档](https://fixit.lruihao.cn/zh-cn/)：
-
-> Gitee 镜像仓库：<https://gitee.com/lruihao/FixIt>
-
-```bash
-git clone --recursive https://github.com/hugo-fixit/FixIt.git && cd FixIt
-
-hugo server --source=docs
-```
+或者在本地运行 [文档站点](https://fixit.lruihao.cn/zh-cn/)，更多细节详见 [参与贡献](#参与贡献)。
 
 除此之外，还有 [FixIt 主题维基](https://github.com/hugo-fixit/FixIt/wiki)。
 
-## 安装或迁移
+## 从 LoveIt 迁移
 
 如果你现在正在使用 LoveIt 主题（或者一些其他的主题），你可以很容易地迁移至 FixIt。
 
@@ -71,13 +72,6 @@ FixIt 主题继承了 LoveIt 等主题的优秀功能，并在它们的基础上
 
 为了直观地浏览主题特性，这里有一些基于 **FixIt** 主题渲染的 [预览网站](https://fixit.lruihao.cn/zh-cn/friends/)。
 
-| 站点                                                          | 仓库                                                         |
-| :----------------------------------------------------------- | :---------------------------------------------------------- |
-| [FixIt 主题官网](https://fixit.lruihao.cn), [FixIt 预览版](https://pre.fixit.lruihao.cn) | [hugo-fixit/docs](https://github.com/hugo-fixit/docs)        |
-| [FixIt 博客模板 - Git](https://demo.fixit.lruihao.cn)   | [hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git) |
-| [FixIt 博客模板 - Go](https://demo.fixit.lruihao.cn)    | [hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go) |
-| [李瑞豪的博客](https://lruihao.cn)                       | [Lruihao/hugo-blog](https://github.com/Lruihao/hugo-blog)    |
-
 ## 特性
 
 ### 性能和 SEO
@@ -88,7 +82,6 @@ FixIt 主题继承了 LoveIt 等主题的优秀功能，并在它们的基础上
 * 支持 **[Fathom Analytics](https://usefathom.com/)**
 * 支持搜索引擎的**网站验证** (Google, Bing, Yandex, Pinterest, Baidu, 360 and Sogou)
 * 支持所有第三方库的 **CDN**
-* 基于 [lazysizes](https://github.com/aFarkas/lazysizes) 自动转换图片为**懒加载**
 
 ### 外观和布局
 
@@ -145,7 +138,7 @@ FixIt 主题继承了 LoveIt 等主题的优秀功能，并在它们的基础上
 * 支持基于 [cookieconsent](https://github.com/osano/cookieconsent) 的 **Cookie 许可横幅**
 * 支持基于 [cell-watermark](https://github.com/Lruihao/watermark) 的**网页水印**
 * 支持基于 [pangu.js](https://github.com/vinta/pangu.js) 的**中文排版**
-* ...
+* ……
 
 ## 多语言和国际化
 
@@ -186,6 +179,10 @@ FixIt 支持下列语言：
 
 ## [所有贡献者](contributors.md)
 
+## 镜像
+
+* Gitee 镜像仓库：<https://gitee.com/lruihao/FixIt>
+
 ## 致谢
 
 <details open>
@@ -199,7 +196,6 @@ FixIt 支持下列语言：
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
 * [Fuse.js](https://fusejs.io/)
-* [lazysizes](https://github.com/aFarkas/lazysizes)
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
 * [emoji-data](https://github.com/iamcal/emoji-data)
@@ -244,11 +240,11 @@ FixIt 根据 **MIT** 许可协议授权。 更多信息请查看 [LICENSE 文件
 
 ## 作者
 
-[Lruihao](https://lruihao.cn)
+[Lruihao](https://github.com/Lruihao "在 GitHub 上关注我")
 
 ## 赞助支持
 
-如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️.
+如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。
 
 * [PayPal](https://paypal.me/Lruihao)
 * [支付宝](images/alipay.gif)

@@ -1,7 +1,7 @@
 # FixIt Theme | Hugo
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.84.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.89.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](/LICENSE)
 
 👉 English README | [简体中文说明](README.zh-cn.md)
@@ -14,21 +14,24 @@ The FixIt theme inherits the excellent features of these themes, and adds new fe
 
 ![Hugo Theme FixIt](https://fixit.lruihao.cn/images/Apple-Devices-Preview.jpg)
 
-## [Getting started](https://fixit.lruihao.cn/categories/documentation/)
+## Getting started
+
+Use one of these templates:
+
+* [hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git)
+* [hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
+* [hugo-fixit/docs](https://github.com/hugo-fixit/docs "FixIt Theme Official Website")
+* [Lruihao/hugo-blog](https://github.com/Lruihao/hugo-blog "Blog of the author of the FixIt theme")
+
+## [Documentation](https://fixit.lruihao.cn/categories/documentation/)
 
 Head to this [documentation page](https://fixit.lruihao.cn/theme-documentation-basics/) for a complete guidence to get started with the FixIt theme.
 
-Or run [Documentation Site](https://fixit.lruihao.cn) locally:
-
-```bash
-git clone --recursive https://github.com/hugo-fixit/FixIt.git && cd FixIt
-
-hugo server --source=docs
-```
+Or run [Documentation Site](https://fixit.lruihao.cn) locally, see more details from [Contributing](#contributing).
 
 In addition, there is the [FixIt wiki](https://github.com/hugo-fixit/FixIt/wiki).
 
-## Install or Migrate
+## Migrate from LoveIt
 
 If you are currently using the LoveIt theme (or some other themes), it is very easy to migrate to FixIt.
 
@@ -69,13 +72,6 @@ In short, if you prefer the design language and freedom of the FixIt theme, and 
 
 To see this theme in action, here are some [live demo sites](https://fixit.lruihao.cn/friends/) which are rendered with **FixIt** theme.
 
-| Site                                                         | Repo                                                         |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [FixIt Theme Official Website](https://fixit.lruihao.cn), [FixIt Preview](https://pre.fixit.lruihao.cn) | [hugo-fixit/docs](https://github.com/hugo-fixit/docs)        |
-| [FixIt Blog Template - Git](https://demo.fixit.lruihao.cn)   | [hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git) |
-| [FixIt Blog Template - Go](https://demo.fixit.lruihao.cn)    | [hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go) |
-| [Lruihao's note](https://lruihao.cn)                         | [Lruihao/hugo-blog](https://github.com/Lruihao/hugo-blog)    |
-
 ## Features
 
 ### Performance and SEO
@@ -86,7 +82,6 @@ To see this theme in action, here are some [live demo sites](https://fixit.lruih
 * **[Fathom Analytics](https://usefathom.com/)** supported
 * Search engine **verification** supported (Google, Bing, Yandex, Pinterest, Baidu, 360 and Sogou)
 * **CDN** for third-party libraries supported
-* Automatically converted images with **Lazy Load** by [lazysizes](https://github.com/aFarkas/lazysizes)
 
 ### Appearance and Layout
 
@@ -197,7 +192,6 @@ Make sure that you follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) while contrib
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
 * [Fuse.js](https://fusejs.io/)
-* [lazysizes](https://github.com/aFarkas/lazysizes)
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
 * [emoji-data](https://github.com/iamcal/emoji-data)
@@ -242,7 +236,7 @@ FixIt is licensed under the **MIT** license. Check the [LICENSE file](LICENSE) f
 
 ## Author
 
-[Lruihao](https://lruihao.cn)
+[Lruihao](https://github.com/Lruihao "Follow me on GitHub")
 
 ## Sponsor
 
